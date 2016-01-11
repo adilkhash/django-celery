@@ -93,3 +93,13 @@ CELERY_SEND_TASK_ERROR_EMAILS = False
 USE_TZ = True
 TIME_ZONE = 'UTC'
 MIDDLEWARE_CLASSES = []
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+    },
+    'django.core.cache.backends.dummy.DummyCache': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
